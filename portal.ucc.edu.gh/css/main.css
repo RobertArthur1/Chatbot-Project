@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Merienda|Montserrat');
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .895rem;
+}
+
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6{
+    font-family: 'Merienda', cursive;
+    margin: 0;
+}
+
+.vertical-line{
+    border: 0.5px solid #d3d3d3;
+    height: auto;
+    margin: 0 20px;
+}
+
+.login-body{
+    width: 100%;
+    height: 100%;
+    background: url(../imgs/calc.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 550px;
+    height: 30rem;
+    background-color: #f0f0f0;
+    padding: 60px 20px 20px 20px;
+    box-shadow: 0 5px rgb(180, 180, 180), 
+    0 10px rgb(120, 120, 120),
+    0 15px rgb(60, 60, 60),
+    0 20px rgb(0, 0, 0);
+}
+
+.login-headline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 80px;
+    background-color: white;
+    padding: 10px 30px;
+    margin-bottom: -40px;
+    z-index: 1;
+    border-radius: 100px;
+    border: solid 5px #efd65f;
+}
+
+.login-headline h3{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.login-headline img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.login-container .vertical-line{
+    height: 20px;
+    align-self: center;
+}
+
+#info-section, #login-form{
+    width: 60%;
+}
+
+#info-section{
+    height: 450px;
+    overflow-y: scroll;
+}
+
+#info-section article {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+    margin-top: 5px;
+    border-radius: 4px;
+}
+
+#info-section article h6{
+    margin-bottom: 3px;
+}
+
+#info-section article p span.important {
+    color: red;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+#info-section article p:last-of-type{ margin-bottom: 0 !important; }
+
+article.info-important{
+    background-color: red !important;
+    border: 1px solid red !important;
+    color: white;
+}
+
+article.info-important p span.important{
+    color: black !important;
+}
+
+p.footer{
+    margin-top: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    color:white;
+    background: black;
+}
+
+@media only screen 
+    and (min-device-width: 320px)
+    and (max-device-width: 480px){
+
+    html, body {
+        width: 100vw !important;
+        height: 100vh !important;
+        font-size: 0.6rem !important;
+    }
+
+    .login-body{
+        width: 100vw !important;
+        height: 100vh !important;
+    }
+
+    .login-container{
+        flex-direction: column;
+        width: 90vw;
+        padding: 40px 20px 20px 20px;
+    }
+
+    .login-headline{
+        width: auto;
+        height: auto;
+        margin-bottom: -30px;
+    }
+
+    .login-headline h3{ font-size: 0.75rem; }
+
+    .login-headline img{
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+    }
+
+    #info-section, #login-form{ width: 100%; }
+    .login-container .vertical-line{ display: none; }
+    #info-section #notices{ height: 100px; }
+    p.footer{ font-size: .75rem; }
+    #login-form{ margin-top: 20px; }
+}
+
+@media only screen 
+    and (min-device-width: 600px)
+    and (max-device-width: 1000px){
+
+    html, body {
+        width: 100vw !important;
+        height: 100vh !important;
+        font-size: 0.85rem !important;
+    }
+
+    .login-body{
+        width: 100vw !important;
+        height: 100vh !important;
+    }
+
+    .login-container{ width: 95vw; }
+    #info-section #notices{ height: 200px; }
+}
+

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="University of Cape Coast Student's Portal. Student Authentication!"
+    />
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/solid.css" />
+    <link rel="stylesheet" type="text/css" href="css/brands.css" />
+    <link rel="stylesheet" type="text/css" href="css/fontawesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="js/js?id=UA-22318036-10"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-22318036-10");
+    </script>
+
+    <title>University of Cape Coast | Student Login</title>
+  </head>
+  <body>
+    <main id="main" class="login-body">
+      <div class="login-headline">
+        <img src=imgs/ucc_logo.png class="img-fluid">
+        <h3>UCC chatbot</h3>
+      </div>
+
+      <div class="login-container">
+        <section id="login-form">
+          <form action="../osis/authen.php" method="post" name="form" id="form">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="regno">
+                    <i class="fas fa-user-graduate fa-lg fa-fw"></i>
+                  </span>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="username"
+                  required
+                  placeholder="Registration Number"
+                  aria-label="Registration Number"
+                  aria-describedby="regno"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="passcode">
+                    <i class="fas fa-key fa-lg fa-fw"></i>
+                  </span>
+                </div>
+                <input
+                  type="password"
+                  class="form-control"
+                  name="password"
+                  required
+                  placeholder="Password"
+                  aria-label="Password"
+                  aria-describedby="password"
+                />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col">
+                <input
+                  name="login"
+                  type="submit"
+                  class="btn btn-primary btn-block"
+                  value="Login"
+                />
+              </div>
+
+              <div class="col" style="align-self: center">
+                <a href="forgot_password.php" class="btn btn-link btn-block">
+                  Forgot password? Reset here!
+                </a>
+              </div>
+            </div>
+          </form>
+
+          <hr class="mb-4 mt-4 mr-4 ml-4" />
+
+          <h6 class="mb-2" style="font-weight: 700">
+            Helplines (Working hours 08:00 - 18:00)
+          </h6>
+          <ul>
+            <li>Main UCC Accounts office : 0508118646</li>
+            <li>
+              System support call MIS office on:
+              <strong>054-5802-062 or 0545801203 </strong>
+            </li>
+            <!-- <li>System support<span class="text-danger"> Whatsapp Only</span> MIS office on: <strong>0572568591</strong></li> -->
+          </ul>
+        </section>
+      </div>
+
+      <p class="footer">
+        &copy; University of Cape Coast - Students' Enquiry Chatbot
+      </p>
+    </main>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
