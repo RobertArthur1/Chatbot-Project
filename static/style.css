@@ -6,6 +6,74 @@
     padding: 0;
 }
 
+/* Chat History Panel Styles */
+.history-panel {
+    height: 100%; /* Full-height */
+    width: 0; /* Initial width */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    top: 0;
+    right: 0;
+    background-color: #111; /* Black background color */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the panel */
+    padding-top: 60px; /* Place content 60px from the top */
+    color: white; /* White text color */
+}
+
+.history-header {
+    padding: 10px 15px;
+    background: #333;
+}
+
+.chat-conversation {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-conversation span {
+    cursor: pointer;
+}
+
+.chat-conversation:hover {
+    background-color: #575757;
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}
+
+.close-history {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+.history-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.history-button:hover {
+    color: #ddd;
+}
+
 body {
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
@@ -19,12 +87,9 @@ body {
     --primaryBoxShadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
     --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
     --primary: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);
+}
 
-/* CHATBOX
-=============== */
-
-/* CONTENT IS CLOSE */
-
+/* CHATBOX */
 .chatbox__support {
     display: flex;
     flex-direction: column;
@@ -36,10 +101,6 @@ body {
     border-top-right-radius: 20px;
 }
 
-/* CONTENT ISOPEN */
-
-
-/* BUTTON */
 .chatbox__button {
     text-align: right;
 }
@@ -52,21 +113,18 @@ body {
     cursor: pointer;
 }
 
-
-/* HEADER */
 .chatbox__header {
     position: sticky;
     top: 0;
     background: orange;
 }
 
-/* MESSAGES */
 .chatbox__messages {
     margin-top: auto;
     display: flex;
     overflow-y: scroll;
     flex-direction: column-reverse;
-    font-family:'Open Sans';
+    font-family: 'Open Sans';
 }
 
 .messages__item--operator {
@@ -77,14 +135,11 @@ body {
     margin-right: auto;
 }
 
-/* FOOTER */
 .chatbox__footer {
     position: sticky;
     bottom: 0;
 }
 
-
-/* HEADER */
 .chatbox__header {
     display: flex;
     flex-direction: column;
@@ -93,11 +148,9 @@ body {
     width: 100%;
     height: 5rem;
     color: #002c71;
-    background:#E0E0E0;
-    
+    background: #E0E0E0;
 }
 
-/* Updated CSS */
 .container {
     display: flex;
     justify-content: center;
@@ -111,7 +164,6 @@ body {
     height: 100vh; /* Set height of container to viewport height */
 }
 
-
 .chatbox .crest {
     position: relative;
     align-items: center;
@@ -120,30 +172,26 @@ body {
 }
 
 .crest {
-    background-color:#002c71;
+    background-color: #002c71;
     width: 20rem;
     height: 32rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 
-/* Rest of your existing styles */
-
-.zola{
+.zola {
     position: relative;
     width: 13rem;
     height: 13rem;
 }
 
-.chatside{
+.chatside {
     text-align: center;
     color: white;
 }
 
-/* Messages */
 .chatbox__messages {
     padding: 0 20px;
 }
@@ -152,7 +200,6 @@ body {
     margin-top: 10px;
     background: #E0E0E0;
     padding: 8px 12px;
-    max-width: 70%;
     max-width: 60.6%;
     width: fit-content;
 }
@@ -172,29 +219,25 @@ body {
     color: white;
 }
 
-/* FOOTER */
 .chatbox__footer {
     background: silver;
     width: 100%;
     height: 3rem;
     display: flex;
-    justify-content:space-between;
-  
+    justify-content: space-between;
 }
 
 .chatbox__footer input {
     width: 90%;
     text-align: left;
-    
 }
 
 .chatbox__send--footer {
     width: 10%;
-    background-color:#002c71;
-
+    background-color: #002c71;
 }
 
-.baby{
+.baby {
     width: 3rem;
     height: 2.5rem;
 }
@@ -211,5 +254,4 @@ body {
     border-bottom-left-radius: 50px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-}
 }

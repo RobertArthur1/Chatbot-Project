@@ -1,12 +1,25 @@
-# app.py
-
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, jsonify, render_template, request, redirect, url_for
 from chatbot import get_response
 
 app = Flask(__name__)
 
 @app.route("/")
 def index_get():
+    return render_template("login.html")
+
+@app.route("/login", methods=["POST"])
+def login():
+    username = request.form.get("username")
+    password = request.form.get("password")
+    # TODO: Authenticate user
+    if username == "test" and password == "test":  # Placeholder for actual authentication logic
+        return redirect(url_for("base"))
+    else:
+        # Handle invalid login
+        return render_template("login.html", error="Invalid username or password")
+
+@app.route("/base")
+def base():
     return render_template("base.html")
 
 @app.route("/predict", methods=["POST"])

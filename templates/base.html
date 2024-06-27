@@ -7,7 +7,6 @@
 </head>
 <body>
 <div class="container">
-    
     <div class="wrapper">
         <div class="crest">
             <img class="zola" src="{{ url_for('static', filename='logoUCC.png') }}" alt="phoy">
@@ -21,19 +20,29 @@
             <div class="chatbox__support">
                 <div class="chatbox__header">
                     <h1>WELCOME TO UCC CHATBOT</h1>
+                    <button id="historyButton" class="chatbox__button history-button">&#9776;</button>
                 </div>
                 <div class="chatbox__messages">
-                    <div></div>
+                    <div id="chatMessages"></div>
                 </div>
                 <div class="chatbox__footer">
-                    <input type="text" placeholder="Write a message...">
-                    <button class="chatbox__send--footer send__button chatbox__button"><img class="baby" src="{{ url_for('static', filename='logoUCC.png') }}" alt=""></button>
+                    <input type="text" id="chatInput" placeholder="Write a message...">
+                    <button id="sendButton" class="chatbox__send--footer send__button chatbox__button">
+                        <img class="baby" src="{{ url_for('static', filename='logoUCC.png') }}" alt="">
+                    </button>
                 </div>
             </div>
         </div>
-        
+        <div id="historyPanel" class="history-panel">
+            <div class="history-header">
+                <span class="close-history">&times;</span>
+                <h2>Chat History</h2>
+            </div>
+            <div id="chatHistory"></div>
+        </div>
     </div>
 </div>
+
 <script>
     $SCRIPT_ROOT = {{ request.script_root|tojson }};
 </script>
